@@ -1,12 +1,18 @@
 <template>
-  <main>
+  <main class="flex-container column">
+    <Header></Header>
     <router-view />
+    <Footer></Footer>
   </main>
 </template>
 
 <script>
+import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
+
 export default {
   name: 'App',
+  components: { Header, Footer },
 };
 </script>
 
@@ -19,6 +25,18 @@ body {
 }
 #app {
   height: 100%;
+}
+.grid-container {
+  display: grid;
+}
+.flex-container {
+  display: flex;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
 }
 * {
   margin: 0;

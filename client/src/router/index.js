@@ -1,9 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import Home from '@/views/Home';
+import LoadingScreen from '@/components/LoadingScreen';
 
 const routes = [
   { path: '/home', name: 'home', component: Home, meta: { title: 'Twiri' } },
+  { path: '/LoadingScreen', name: 'loading', component: LoadingScreen },
   { path: '/:pathMatch(.*)*', name: 'gohome', redirect: '/home' },
 ];
 
