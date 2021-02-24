@@ -17,6 +17,8 @@ This guide will show how to install these software:
 
 ### Installing Node.js
 
+###### Windows OS
+
 Start with downloading Node.js version LTS from the [Node.js](https://nodejs.org/en/) downloads page. Run the installer and leave most settings at default. Make sure that **npm package manager** is set to be installed.
 
 After installation, verify that Node was successfully installed by opening up a Command Prompt and typing
@@ -25,9 +27,29 @@ After installation, verify that Node was successfully installed by opening up a 
 
 It should display the version number of Node installed (v12.18.3).
 
+###### Mac OSX
+
+Homebrew Installation
+
+```
+brew update
+brew install node
+```
+
 ### Installing PostgreSQL
 
+###### Windows OS
+
 Download PostgreSQL [here](https://www.postgresql.org/download/). When you install, it is strongly recommended including pgAdmin as a part of the installation package.
+
+###### Mac OSX
+
+These commands will start a daemon in the background allowing postgres to continue running.
+
+```
+brew install postgresql
+brew services start postgresql
+```
 
 ## Verify Postgresql database server connection
 
@@ -81,15 +103,15 @@ I tried to keep the structure as simple as possible, so that anyone who wants to
 
 # Release Notes
 
-## 2021-02-01 
+## 2021-02-01
 
 _EJS view engine_
 
-- implemented the EJS templating engine 
+- implemented the EJS templating engine
 - divided the quiz into reusable partials, stored in the /partials folder
 - changed how the website is loaded on the client-side
 - renders the html on the server with the proper language text before sending it back to the client
-- fixed german/french language 
+- fixed german/french language
 - removed translated names for languages, now all languages are just simply called what they are in their native language (for example English will always display as English, French will always display as Français, etc)
 - removed html_helpers.js
 - removed create_quiz.js
